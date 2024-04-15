@@ -21,7 +21,7 @@ const Routers = () => {
       <Route path="/services" element={<Services/>} />
       <Route path="/contact" element={<Contact/>} />
     </Routes>
-  );
+  )
 };
 
 export default Routers;
