@@ -4,8 +4,8 @@ import heroImg3 from '../../src/assets/images/img_H2.jpg';
 import icon01 from '../assets/images/icon01.png';
 import icon02 from '../assets/images/icon02.png';
 import icon03 from '../assets/images/icon03.png';
-import featureImg from '../assets/images/feature-img.png';
-import faqImg from '../assets/images/faq-img.png';
+import featureImg from '../assets/images/feature-img01.jpg';
+import faqImg from '../assets/images/faq-img02.jpg';
 import videoIcon from '../assets/images/video-icon.png';
 import avatarIcon from '../assets/images/avatar_icon.png';
 import { Link } from 'react-router-dom';
@@ -44,7 +44,7 @@ const Home = () => {
              </div>
 
             {/*___________________________ hero counter/Statistical _______________________ */}
-            
+           
              <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]">
                <div>
                  <h2 className="text-[36px] leading-[56px] lg:text-[36px] lg:leading-[54px] font-[700] text-headingColor">50+</h2>

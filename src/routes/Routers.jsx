@@ -6,8 +6,12 @@ import Signup from '../pages/Signup.jsx';
 import Contact from '../pages/Contact.jsx';
 import Doctors from '../pages/Doctors/Doctors.jsx';
 import DoctorsDetails from '../pages/Doctors/DoctorsDetails.jsx';
+import MyAccount from '../Dashboard/user-account/MyAccount.jsx';
+import Dashboard from '../Dashboard/doctor-account/Dashboard.jsx';
+
 
 import {Routes, Route} from 'react-router-dom';
+import ProtectedRoute from './ProtectedRoute.jsx';
 
 const Routers = () => {
   return (
@@ -18,10 +22,12 @@ const Routers = () => {
       <Route path="/doctors/:id" element={<DoctorsDetails/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/register" element={<Signup/>} />
-      <Route path="/services" element={<Services/>} />
       <Route path="/contact" element={<Contact/>} />
+      <Route path="/services" element={<Services/>} />
+      <Route path="/users/profile/me" element={<ProtectedRoute allowedRoles={['patient']}><MyAccount/></ProtectedRoute>} />
+      <Route path="/doctors/profile/me" element={<ProtectedRoute allowedRoles={['doctor']}><Dashboard/></ProtectedRoute>} />
     </Routes>
-  )
+  );
 };
 
 export default Routers;
